@@ -1,7 +1,7 @@
 //on install - caching the appllication shell
 self.addEventListener('install', function(event){
     event.waitUntil(
-        cashes.open('sw-cache').then(function(cache){
+        caches.open('sw-cache').then(function(cache){
             //cache any static files that make up the applivatin shell
             return cache.add('index.html')
         })
